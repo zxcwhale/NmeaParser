@@ -4,12 +4,12 @@ This project demonstrate how to parser NMEA protocol.
 
 ## Modules
 
-| Module           | Function                                    |
-| ---------------- | ------------------------------------------- |
-| `nmea_reader`    | Read NMEA data, contains one NMEA sentence. |
-| `nmea_tokenizer` | Split NMEA sentence into `token`s.          |
-| `parser`         | Parse nmea `token`s.                        |
-| `nav_data`       | Navigation data.                            |
+| Module           | Files                         | Description                                 |
+| ---------------- | ----------------------------- | ------------------------------------------- |
+| `nmea_reader`    | `nmeardr.h` `nmeardr.c`       | Read NMEA data, contains one NMEA sentence. |
+| `nmea_tokenizer` | `nmeatknzr.h` `nmeatknzr.c`   | Split NMEA sentence into `token`s.          |
+| `parser`         | `nmeaparser.h` `nmeaparser.c` | Parse nmea from `token`s.                   |
+| `nav_data`       | `navdata.h` `navdata.c`       | Navigation data.                            |
 
 1. Add NMEA data to `nmea_reader` by character.
 2. If encounter '\n',  using `nmea_tokenizer` split `nmea_reader`.
