@@ -3,7 +3,6 @@
 #include <string.h>
 #include <stdbool.h>
 #include <math.h>
-
 #include "nmeaparser.h"
 
 /**
@@ -34,6 +33,7 @@ int main(void)
 
         } while (!feof(f));
 
+        fclose(f);
         return 0;
 }
 
