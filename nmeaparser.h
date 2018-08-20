@@ -29,6 +29,8 @@ struct nmea_parser {
         struct nmea_reader      reader[1];      // read nmea data
         struct nmea_tokenizer   tzer[1];        // split nmea tokens
         struct nav_data         data[1];        // store navigation data
+
+        void (*report_nav_status)(struct nav_data *navdata);    // callback function to report navigtaion status
 };
 
 void nmea_parser_init(struct nmea_parser *p);

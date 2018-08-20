@@ -87,6 +87,5 @@ int prn2svid(int prn, int constell);    // convert @prn and @constell to SVID
 int tell_constell(int svid);            // tell the constellation type of @svid
 const char *constell_name(int constell);        // get constellation type's name
 void navdata_init(struct nav_data *d);          // int nav_data to 0
-void navdata_display(struct nav_data *d);       // display nav_data
 
 #endif

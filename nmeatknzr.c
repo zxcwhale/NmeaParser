@@ -39,7 +39,7 @@ struct token nmea_tokenizer_get(struct nmea_tokenizer *t, int index)
 }
 
 /*
- * Init nmea_tokenizer for buffer points to NMEA sentence
+ * Init nmea_tokenizer from ptr of NMEA sentence
  * @r:          the nmea_tokenizer
  * @p:          ptr to the nmea sentence start
  * @end:        ptr to the nmea sentence end

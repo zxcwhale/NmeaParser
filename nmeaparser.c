@@ -340,13 +340,16 @@ void parse_gsv(struct nmea_tokenizer *tzer, struct nav_data *d) {
 /*
  * Parse current nmea sentence
  */
-void parse(struct nmea_tokenizer *tzer, struct nav_data *navdata) {
+void parse(struct nmea_tokenizer *tzer, struct nav_data *navdata, void (*reporter)(struct nav_data *)) {
         struct token tok = nmea_tokenizer_get(tzer, 0);
 
         tok.p += 2;
         // display and reset nav_data if encounter GGA sentence
         if (memcmp(tok.p, "GGA", 3) == 0) {
-                navdata_display(navdata);
+                // navdata_display(navdata);
+                if (reporter)
+                        reporter(navdata);
+                
                 navdata_init(navdata);
         }
 
@@ -383,7 +386,7 @@ void nmea_parser_putchar(struct nmea_parser *p, char c)
         if (c == '\n') {
                 if (nmea_reader_check(p->reader)) {
                         nmea_tokenizer_init(p->tzer, p->reader->buf, p->reader->buf + p->reader->pos);
-                        parse(p->tzer, p->data);
+                        parse(p->tzer, p->data, p->report_nav_status);
                 }
                 nmea_reader_init(p->reader);
         }
