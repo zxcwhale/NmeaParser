@@ -28,7 +28,7 @@
  * SVID is the satellite's id in all constellations.
  * 1-64:        GPS 
  * 65-96:       GLNONASS 
- * 201-232:     Beidou
+ * 201-264:     Beidou
  */
 
 /*
@@ -47,7 +47,7 @@ int prn2svid(int prn, int constell)
                         prn += PRN_PLUS_GLN;
                 break;
         case CONSTELL_TYPE_BDS:
-                if (prn > 0 && prn < 33)
+                if (prn > 0 && prn < 65)
                         prn += PRN_PLUS_BDS;
                 break;
         default:
@@ -70,7 +70,7 @@ int tell_constell(int svid)
         else if (svid > 64 && svid < 97) {
                 return CONSTELL_TYPE_GLN;
         }
-        else if (svid > 200 && svid < 233) {
+        else if (svid > 200 && svid < 265) {
                 return CONSTELL_TYPE_BDS;
         }
 

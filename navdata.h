@@ -20,7 +20,7 @@
 #define __NAV_DATA_H
 #include <stdbool.h>
 
-#define MAX_SVID        256
+#define MAX_SVID        300
 
 enum {
         CONSTELL_TYPE_UNKNOWN = 0,
