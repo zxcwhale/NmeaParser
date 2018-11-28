@@ -24,7 +24,7 @@
 #define PRN_PLUS_BDS    200
 /*
  * PRN and SVID
- * PRN is the satellite's NO. in NMEA protocol. Normally from 1 to 32.
+ * PRN is the satellite's NO. in NMEA protocol.
  * SVID is the satellite's id in all constellations.
  * 1-64:        GPS 
  * 65-96:       GLNONASS 

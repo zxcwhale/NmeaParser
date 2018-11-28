@@ -46,7 +46,7 @@ Positive for  East, and negative for West.
 
 #### Satellite's PRN and SVID
 
-`PRN` is the satellite's NO. in NMEA. Normally from 1 to 32.
+`PRN` is the satellite's NO. in NMEA.
 
 `SVID` is the index in satellite's array.
 
@@ -54,7 +54,7 @@ Positive for  East, and negative for West.
 | ---------- | ------------------ |
 | 1-64       | GPS                |
 | 65-96      | GLONASS            |
-| 201-232    | Beidou             |
+| 201-264    | Beidou             |
 
 
 
